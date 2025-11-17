@@ -1,0 +1,75 @@
+{
+  "name": "@zahoor/fastify-storage",
+  "version": "0.0.1",
+  "description": "A Fastify plugin integrating Unstorage, providing base storage, prefixed storage, and snapshot/restore utilities with automatic cleanup on server shutdown.",
+  "keywords": [
+    "fastify",
+    "plugin",
+    "plugins",
+    "storage",
+    "unstorage"
+  ],
+  "homepage": "https://zahoor.wang/fastify/plugin/storage",
+  "bugs": {
+    "url": "https://github.com/zahoorwang/fastify-plugin-storage/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zahoorwang/fastify-plugin-storage.git"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/zahoorwang"
+    }
+  ],
+  "license": "MIT",
+  "author": "Zahoor Wang <zahoor.wang@gmail.com>",
+  "sideEffects": false,
+  "type": "commonjs",
+  "exports": {
+    ".": "./dist/index.js",
+    "./drivers/*": "./dist/drivers/*.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run code:fmt && npm run code:lint && npm run code:test && npm run code:build",
+    "code:build": "node generate-drivers.mjs && rolldown -c",
+    "code:fmt": "oxfmt",
+    "code:lint": "oxlint",
+    "code:lint:fix": "oxlint --fix",
+    "code:test": "vitest run --typecheck.tsconfig tsconfig.test.json --coverage",
+    "package:sort": "sort-package-json",
+    "package:taze": "taze -I",
+    "test": "npm run code:test"
+  },
+  "dependencies": {
+    "fastify-plugin": "^5.1.0",
+    "unstorage": "^1.17.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@vitest/coverage-v8": "^4.0.9",
+    "fastify": "^5.6.2",
+    "oxfmt": "^0.13.0",
+    "oxlint": "^1.28.0",
+    "rolldown": "1.0.0-beta.49",
+    "rolldown-plugin-dts": "^0.17.6",
+    "sort-package-json": "^3.4.0",
+    "taze": "^19.9.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.9"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
