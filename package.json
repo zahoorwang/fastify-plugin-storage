@@ -46,25 +46,25 @@
     "code:lint:fix": "oxlint --fix",
     "code:test": "vitest run --typecheck.tsconfig tsconfig.test.json --coverage",
     "package:sort": "sort-package-json",
-    "package:taze": "taze -I",
+    "package:taze": "taze major -I --peer --force",
     "test": "npm run code:test"
   },
   "dependencies": {
     "fastify-plugin": "^5.1.0",
-    "unstorage": "^1.17.2"
+    "unstorage": "^1.17.3"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
-    "@vitest/coverage-v8": "^4.0.9",
+    "@vitest/coverage-v8": "^4.0.14",
     "fastify": "^5.6.2",
-    "oxfmt": "^0.13.0",
-    "oxlint": "^1.28.0",
-    "rolldown": "1.0.0-beta.49",
-    "rolldown-plugin-dts": "^0.17.6",
-    "sort-package-json": "^3.4.0",
-    "taze": "^19.9.0",
+    "oxfmt": "^0.15.0",
+    "oxlint": "^1.30.0",
+    "rolldown": "latest",
+    "rolldown-plugin-dts": "^0.18.1",
+    "sort-package-json": "^3.5.0",
+    "taze": "^19.9.2",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.9"
+    "vitest": "^4.0.14"
   },
   "engines": {
     "node": ">=18.0.0"
