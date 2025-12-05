@@ -10,7 +10,7 @@ export default defineConfig({
     include: ['test/**/*.test.ts'],
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'lcov'],
+      reporter: ['html', 'text', 'lcov'],
       exclude: ['dist', 'node_modules', '**/*.d.ts']
     },
     logHeapUsage: true

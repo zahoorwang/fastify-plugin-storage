@@ -9,5 +9,5 @@
   "arrowParens": "avoid",
   "trailingComma": "none",
 
-  "ignorePatterns": ["*.mjs", "rolldown.config.ts", "vitest.config.ts", "test", "src/drivers"]
+  "ignorePatterns": ["*.mjs", "src/drivers"]
 }
